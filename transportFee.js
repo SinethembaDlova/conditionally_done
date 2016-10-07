@@ -17,9 +17,18 @@ var transportFee = function(shift)
     return "Your transport is free, you're covered.";
   }
 };
+assert.equal(transportFee("night"), "Your transport is free, you're covered.");
+assert.equal(transportFee("morning"), "R20");
+assert.equal(transportFee("afternoon"), "R10, work will cover your transport back home.");
 
 transportFee("night");
-assert.equal(transportFee("night"), "Your transport is free, you're covered.");
+transportFee("night");
+transportFee("night");
 
 var shiftsheet = transportFee("night");
+var shiftsheet1 = transportFee("morning");
+var shiftsheet2 = transportFee("afternoon");
+
 console.log(shiftsheet);
+console.log(shiftsheet1);
+console.log(shiftsheet2);
